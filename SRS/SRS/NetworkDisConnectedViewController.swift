@@ -9,12 +9,14 @@ import UIKit
 import RxCocoa
 import RxSwift
 import SystemConfiguration
+import Toaster
 
 class NetworkDisConnectedViewController: UIViewController {
     
     @IBOutlet weak var refreshButton: UIButton!
     
     let disposeBag = DisposeBag()
+    let toastNetworkText = Toast(text: "네트워크 연결이 불안정합니다", duration: Delay.short)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class NetworkDisConnectedViewController: UIViewController {
 }
 
 extension NetworkDisConnectedViewController {
+    
+    
     
     func isInternetAvailable() -> Bool
         {
@@ -58,7 +62,9 @@ extension NetworkDisConnectedViewController {
                 if (self.isInternetAvailable() == true) {
                     self.dismiss(animated: true, completion: nil)
                 } else {
-                    //toaster 추가 해줄 예정.
+                    self.toastNetworkText.show()
+                    self.dismiss(animated: true, completion: nil)
+                    
                 }
             }.disposed(by: disposeBag)
     }
