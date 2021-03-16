@@ -9,5 +9,6 @@ target 'SRS' do
 
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'Toaster'
 
 end
