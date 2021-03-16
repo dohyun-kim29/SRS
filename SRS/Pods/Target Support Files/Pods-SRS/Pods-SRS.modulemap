@@ -1,0 +1,6 @@
+framework module Pods_SRS {
+  umbrella header "Pods-SRS-umbrella.h"
+
+  export *
+  module * { export * }
+}
