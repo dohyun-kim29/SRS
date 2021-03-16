@@ -18,8 +18,15 @@ class ViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        networkVaild()
+        
         request()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        networkVaild()
+        
     }
 
 
@@ -57,8 +64,9 @@ extension ViewController {
     func networkVaild() {
         
         if(isInternetAvailable() == true) {
-            
+            print("네트워크 연결 성공")
         } else {
+            print("네트워크 연결 실패")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "NetworkDisConnectedViewController")
             vc.modalPresentationStyle = .fullScreen
