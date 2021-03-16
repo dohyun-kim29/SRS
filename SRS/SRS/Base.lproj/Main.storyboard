@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,10 +43,88 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="118.29085457271366"/>
         </scene>
+        <!--Network Dis Connected View Controller-->
+        <scene sceneID="qxJ-uz-U91">
+            <objects>
+                <viewController storyboardIdentifier="NetworkDisConnectedViewController" id="v8C-va-GMb" customClass="NetworkDisConnectedViewController" customModule="SRS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3K-Kw-oq9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iCon" translatesAutoresizingMaskIntoConstraints="NO" id="D8R-3I-xxx">
+                                <rect key="frame" x="95.5" y="190" width="184" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7zd-uo-IUI"/>
+                                    <constraint firstAttribute="width" constant="184" id="bqX-gF-xbm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text" translatesAutoresizingMaskIntoConstraints="NO" id="wz3-aZ-6d3">
+                                <rect key="frame" x="67.5" y="338" width="240" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="W4g-db-7jc"/>
+                                    <constraint firstAttribute="height" constant="58" id="yxU-VJ-1Bn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인터넷 연결이 불안정합니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybq-K5-foY">
+                                <rect key="frame" x="94.5" y="416" width="186" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="1qO-Bm-YTn"/>
+                                    <constraint firstAttribute="height" constant="21" id="7On-MU-Gvw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-fb-gLW">
+                                <rect key="frame" x="175.5" y="457" width="24" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="ITl-NN-SyT"/>
+                                    <constraint firstAttribute="width" constant="24" id="wKv-Zg-Sws"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button">
+                                    <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J63-nL-uWh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="D8R-3I-xxx" firstAttribute="top" secondItem="J63-nL-uWh" secondAttribute="top" constant="190" id="2VV-rO-fB1"/>
+                            <constraint firstItem="eOu-fb-gLW" firstAttribute="leading" secondItem="J63-nL-uWh" secondAttribute="leading" constant="175.5" id="3jr-TI-t5J"/>
+                            <constraint firstItem="ybq-K5-foY" firstAttribute="leading" secondItem="J63-nL-uWh" secondAttribute="leading" constant="94.5" id="F7H-KX-LRN"/>
+                            <constraint firstItem="ybq-K5-foY" firstAttribute="top" secondItem="wz3-aZ-6d3" secondAttribute="bottom" constant="20" id="HHe-le-L7M"/>
+                            <constraint firstItem="D8R-3I-xxx" firstAttribute="leading" secondItem="J63-nL-uWh" secondAttribute="leading" constant="95.5" id="RWS-yS-J4B"/>
+                            <constraint firstItem="eOu-fb-gLW" firstAttribute="top" secondItem="ybq-K5-foY" secondAttribute="bottom" constant="20" id="VId-qH-mwB"/>
+                            <constraint firstItem="J63-nL-uWh" firstAttribute="trailing" secondItem="D8R-3I-xxx" secondAttribute="trailing" constant="95.5" id="dgQ-wn-oxI"/>
+                            <constraint firstItem="J63-nL-uWh" firstAttribute="trailing" secondItem="wz3-aZ-6d3" secondAttribute="trailing" constant="67.5" id="eLG-Z4-Phw"/>
+                            <constraint firstItem="J63-nL-uWh" firstAttribute="trailing" secondItem="eOu-fb-gLW" secondAttribute="trailing" constant="175.5" id="wjj-Pr-hud"/>
+                            <constraint firstItem="J63-nL-uWh" firstAttribute="trailing" secondItem="ybq-K5-foY" secondAttribute="trailing" constant="94.5" id="xP9-Z5-PGB"/>
+                            <constraint firstItem="wz3-aZ-6d3" firstAttribute="leading" secondItem="J63-nL-uWh" secondAttribute="leading" constant="67.5" id="yvu-R3-FZt"/>
+                            <constraint firstItem="wz3-aZ-6d3" firstAttribute="top" secondItem="D8R-3I-xxx" secondAttribute="bottom" constant="20" id="zGg-Zp-Y2V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="refreshButton" destination="eOu-fb-gLW" id="hwM-gQ-EGS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsT-fW-ECd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845.60000000000002" y="117.39130434782609"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="iCon" width="766" height="537"/>
+        <image name="text" width="1258" height="253"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

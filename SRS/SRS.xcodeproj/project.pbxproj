@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		479B8004260043A3005AA267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479B8003260043A3005AA267 /* Assets.xcassets */; };
 		479B8007260043A3005AA267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479B8005260043A3005AA267 /* LaunchScreen.storyboard */; };
 		479B801126004694005AA267 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479B801026004694005AA267 /* WebKit.framework */; };
+		479B801A260055C9005AA267 /* NetworkDisConnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479B8019260055C9005AA267 /* NetworkDisConnectedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		479B8006260043A3005AA267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		479B8008260043A3005AA267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		479B801026004694005AA267 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		479B8019260055C9005AA267 /* NetworkDisConnectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDisConnectedViewController.swift; sourceTree = "<group>"; };
 		5657442018E7742332B747F3 /* Pods-SRS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRS.debug.xcconfig"; path = "Target Support Files/Pods-SRS/Pods-SRS.debug.xcconfig"; sourceTree = "<group>"; };
 		8DCBE7E06E444ED3D4778EC7 /* Pods-SRS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRS.release.xcconfig"; path = "Target Support Files/Pods-SRS/Pods-SRS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,7 +53,6 @@
 				5657442018E7742332B747F3 /* Pods-SRS.debug.xcconfig */,
 				8DCBE7E06E444ED3D4778EC7 /* Pods-SRS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +79,7 @@
 			children = (
 				479B7FFA260043A0005AA267 /* AppDelegate.swift */,
 				479B7FFC260043A0005AA267 /* SceneDelegate.swift */,
+				479B8019260055C9005AA267 /* NetworkDisConnectedViewController.swift */,
 				479B7FFE260043A0005AA267 /* ViewController.swift */,
 				479B8000260043A0005AA267 /* Main.storyboard */,
 				479B8003260043A3005AA267 /* Assets.xcassets */,
@@ -212,6 +214,7 @@
 			files = (
 				479B7FFF260043A0005AA267 /* ViewController.swift in Sources */,
 				479B7FFB260043A0005AA267 /* AppDelegate.swift in Sources */,
+				479B801A260055C9005AA267 /* NetworkDisConnectedViewController.swift in Sources */,
 				479B7FFD260043A0005AA267 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
