@@ -13,7 +13,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet weak var mainWebView: WKWebView!
     
-    let mainWebViewUrl = "http://dsm-rsr.s3-website.ap-northeast-2.amazonaws.com"
+    let mainWebViewUrl = "http://d7uk448nq1vox.cloudfront.net"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +75,8 @@ extension ViewController {
     }
     
     func request() {
-        
+        let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.websiteDataStore = WKWebsiteDataStore.default()
         self.mainWebView.load(URLRequest(url: URL(string: mainWebViewUrl)!))
         self.mainWebView.navigationDelegate = self
         

@@ -90,16 +90,14 @@
                         <viewLayoutGuide key="safeArea" id="J63-nL-uWh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eOu-fb-gLW" firstAttribute="centerX" secondItem="ybq-K5-foY" secondAttribute="centerX" id="1Mt-Jk-JI3"/>
                             <constraint firstItem="D8R-3I-xxx" firstAttribute="top" secondItem="J63-nL-uWh" secondAttribute="top" constant="190" id="2VV-rO-fB1"/>
-                            <constraint firstItem="eOu-fb-gLW" firstAttribute="leading" secondItem="J63-nL-uWh" secondAttribute="leading" constant="175.5" id="3jr-TI-t5J"/>
-                            <constraint firstItem="ybq-K5-foY" firstAttribute="leading" secondItem="J63-nL-uWh" secondAttribute="leading" constant="94.5" id="F7H-KX-LRN"/>
+                            <constraint firstItem="ybq-K5-foY" firstAttribute="centerX" secondItem="wz3-aZ-6d3" secondAttribute="centerX" id="Atj-n4-0jz"/>
                             <constraint firstItem="ybq-K5-foY" firstAttribute="top" secondItem="wz3-aZ-6d3" secondAttribute="bottom" constant="20" id="HHe-le-L7M"/>
                             <constraint firstItem="D8R-3I-xxx" firstAttribute="leading" secondItem="J63-nL-uWh" secondAttribute="leading" constant="95.5" id="RWS-yS-J4B"/>
                             <constraint firstItem="eOu-fb-gLW" firstAttribute="top" secondItem="ybq-K5-foY" secondAttribute="bottom" constant="20" id="VId-qH-mwB"/>
                             <constraint firstItem="J63-nL-uWh" firstAttribute="trailing" secondItem="D8R-3I-xxx" secondAttribute="trailing" constant="95.5" id="dgQ-wn-oxI"/>
                             <constraint firstItem="J63-nL-uWh" firstAttribute="trailing" secondItem="wz3-aZ-6d3" secondAttribute="trailing" constant="67.5" id="eLG-Z4-Phw"/>
-                            <constraint firstItem="J63-nL-uWh" firstAttribute="trailing" secondItem="eOu-fb-gLW" secondAttribute="trailing" constant="175.5" id="wjj-Pr-hud"/>
-                            <constraint firstItem="J63-nL-uWh" firstAttribute="trailing" secondItem="ybq-K5-foY" secondAttribute="trailing" constant="94.5" id="xP9-Z5-PGB"/>
                             <constraint firstItem="wz3-aZ-6d3" firstAttribute="leading" secondItem="J63-nL-uWh" secondAttribute="leading" constant="67.5" id="yvu-R3-FZt"/>
                             <constraint firstItem="wz3-aZ-6d3" firstAttribute="top" secondItem="D8R-3I-xxx" secondAttribute="bottom" constant="20" id="zGg-Zp-Y2V"/>
                         </constraints>
