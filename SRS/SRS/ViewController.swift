@@ -10,14 +10,20 @@ import WebKit
 import SystemConfiguration
 
 class ViewController: UIViewController, WKNavigationDelegate {
-
+    
     @IBOutlet weak var mainWebView: WKWebView!
     
-    let mainWebViewUrl = "http://d7uk448nq1vox.cloudfront.net"
+    let mainWebViewUrl: URLRequest = URLRequest.init(url: NSURL.init(string: "http://www.dsm-srs.site/signin")! as URL, cachePolicy: URLRequest.CachePolicy.useProtocolCachePolicy, timeoutInterval: 10)
+    
+    let config = WKWebViewConfiguration()
+    
+    //    let httpCookieStorage = WKHTTPCookieStore
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //        bringcookie()
         
         request()
     }
@@ -28,38 +34,38 @@ class ViewController: UIViewController, WKNavigationDelegate {
         networkVaild()
         
     }
-
-
+    
+    
 }
 
 extension ViewController {
     
     func isInternetAvailable() -> Bool
-        {
-            var zeroAddress = sockaddr_in()
-            zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
-            zeroAddress.sin_family = sa_family_t(AF_INET)
-            
-            let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
-                $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
-                    SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
-                }
+    {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
             }
-            
-            var flags = SCNetworkReachabilityFlags()
-
-            if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
-
-                return false
-
-            }
-
-            let isReachable = flags.contains(.reachable)
-            let needsConnection = flags.contains(.connectionRequired)
-
-            return (isReachable && !needsConnection)
         }
-
+        
+        var flags = SCNetworkReachabilityFlags()
+        
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            
+            return false
+            
+        }
+        
+        let isReachable = flags.contains(.reachable)
+        let needsConnection = flags.contains(.connectionRequired)
+        
+        return (isReachable && !needsConnection)
+    }
+    
     
     func networkVaild() {
         
@@ -75,11 +81,44 @@ extension ViewController {
     }
     
     func request() {
-        let webConfiguration = WKWebViewConfiguration()
-        webConfiguration.websiteDataStore = WKWebsiteDataStore.default()
-        self.mainWebView.load(URLRequest(url: URL(string: mainWebViewUrl)!))
+        
+        config.websiteDataStore = WKWebsiteDataStore.default()
+        
+        config.processPool = WKProcessPool()
+        
+        let cookies = HTTPCookieStorage.shared.cookies ?? [HTTPCookie]()
+        cookies.forEach({ config.websiteDataStore.httpCookieStore.setCookie($0, completionHandler: nil) })
+        
+        
+        self.mainWebView.load(self.mainWebViewUrl)
+        
+        
         self.mainWebView.navigationDelegate = self
         
     }
+    
+    func fillCookieStore(store: WKHTTPCookieStore, completionHandler: (() -> Void)? = nil) {
+        
+        
+        if let cookies = HTTPCookieStorage.shared.cookies {
+            
+            let sem = DispatchGroup()
+            for cookie in cookies {
+                sem.enter()
+                store.setCookie(cookie, completionHandler: {
+                    sem.leave()
+                })
+            }
+            
+            sem.notify(queue: .main) {
+                completionHandler?()
+            }
+        } else {
+            completionHandler?()
+        }
+    }
+    
+    
+    
 }
 
