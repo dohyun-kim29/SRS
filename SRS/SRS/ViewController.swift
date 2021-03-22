@@ -11,11 +11,14 @@ import SystemConfiguration
 
 class ViewController: UIViewController, WKNavigationDelegate {
     
-    @IBOutlet weak var mainWebView: WKWebView!
+    var mainWebView: WKWebView!
     
     let mainWebViewUrl: URLRequest = URLRequest.init(url: NSURL.init(string: "http://www.dsm-srs.site/signin")! as URL, cachePolicy: URLRequest.CachePolicy.useProtocolCachePolicy, timeoutInterval: 10)
     
+    let mainWebViewUrl2: URLRequest = URLRequest.init(url: URL(string: "http://www.dsm-srs.site/signin")!)
+    
     let config = WKWebViewConfiguration()
+    let preferens = WKPreferences()
     
     //    let httpCookieStorage = WKHTTPCookieStore
     
@@ -84,16 +87,23 @@ extension ViewController {
         
         config.websiteDataStore = WKWebsiteDataStore.default()
         
-        config.processPool = WKProcessPool()
+//        config.processPool = WKProcessPool()
+        
+        preferens.javaScriptEnabled = true
+        
+        config.preferences = preferens
+        
         
         let cookies = HTTPCookieStorage.shared.cookies ?? [HTTPCookie]()
         cookies.forEach({ config.websiteDataStore.httpCookieStore.setCookie($0, completionHandler: nil) })
         
-        
+        mainWebView = WKWebView(frame: view.bounds, configuration: config)
+        view.addSubview(mainWebView)
         self.mainWebView.load(self.mainWebViewUrl)
         
         
         self.mainWebView.navigationDelegate = self
+        mainWebView.becomeFirstResponder()
         
     }
     
