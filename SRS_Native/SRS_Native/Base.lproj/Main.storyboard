@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-255" y="100"/>
         </scene>
-        <!--View Controller-->
+        <!--Network Dis Connected View Controller-->
         <scene sceneID="Eey-Pp-2oJ">
             <objects>
-                <viewController id="Pmz-VP-gtE" sceneMemberID="viewController">
+                <viewController id="Pmz-VP-gtE" customClass="NetworkDisConnectedViewController" customModule="SRS_Native" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iLI-4y-ecC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,6 +96,9 @@
                             <constraint firstItem="Ulv-Dg-kwo" firstAttribute="top" secondItem="dJd-eg-eGV" secondAttribute="bottom" constant="25" id="tA8-Xi-hiT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="refreshButton" destination="nO9-e4-ZVh" id="Fa8-gQ-0wn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCA-J9-HYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

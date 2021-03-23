@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		479B826B2609AB4B005AA267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479B82692609AB4B005AA267 /* Main.storyboard */; };
 		479B826D2609AB4D005AA267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479B826C2609AB4D005AA267 /* Assets.xcassets */; };
 		479B82702609AB4D005AA267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479B826E2609AB4D005AA267 /* LaunchScreen.storyboard */; };
+		479B82832609BF87005AA267 /* NetworkDisConnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479B82822609BF87005AA267 /* NetworkDisConnectedViewController.swift */; };
 		4D0DEDC2C4803E2E739A78B4 /* Pods_SRS_Native.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C0A71B8384FB6F19753CD8 /* Pods_SRS_Native.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		479B826C2609AB4D005AA267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479B826F2609AB4D005AA267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		479B82712609AB4D005AA267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		479B82822609BF87005AA267 /* NetworkDisConnectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDisConnectedViewController.swift; sourceTree = "<group>"; };
 		B3B3C7E3CD06E6B85FEEA6A5 /* Pods-SRS_Native.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRS_Native.release.xcconfig"; path = "Target Support Files/Pods-SRS_Native/Pods-SRS_Native.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 				479B82632609AB4A005AA267 /* AppDelegate.swift */,
 				479B82652609AB4A005AA267 /* SceneDelegate.swift */,
 				479B82672609AB4A005AA267 /* ViewController.swift */,
+				479B82822609BF87005AA267 /* NetworkDisConnectedViewController.swift */,
 				479B82692609AB4B005AA267 /* Main.storyboard */,
 				479B826C2609AB4D005AA267 /* Assets.xcassets */,
 				479B826E2609AB4D005AA267 /* LaunchScreen.storyboard */,
@@ -88,7 +91,6 @@
 				412FC1717EB35691987CF57A /* Pods-SRS_Native.debug.xcconfig */,
 				B3B3C7E3CD06E6B85FEEA6A5 /* Pods-SRS_Native.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +210,7 @@
 			files = (
 				479B82682609AB4B005AA267 /* ViewController.swift in Sources */,
 				479B82642609AB4A005AA267 /* AppDelegate.swift in Sources */,
+				479B82832609BF87005AA267 /* NetworkDisConnectedViewController.swift in Sources */,
 				479B82662609AB4A005AA267 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
