@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-SRS_Test/Pods-SRS_Test-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework
+${BUILT_PRODUCTS_DIR}/LayoutHelper/LayoutHelper.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework

@@ -13,9 +13,12 @@
 		479B826B2609AB4B005AA267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479B82692609AB4B005AA267 /* Main.storyboard */; };
 		479B826D2609AB4D005AA267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479B826C2609AB4D005AA267 /* Assets.xcassets */; };
 		479B82702609AB4D005AA267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479B826E2609AB4D005AA267 /* LaunchScreen.storyboard */; };
+		4D0DEDC2C4803E2E739A78B4 /* Pods_SRS_Native.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C0A71B8384FB6F19753CD8 /* Pods_SRS_Native.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		412FC1717EB35691987CF57A /* Pods-SRS_Native.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRS_Native.debug.xcconfig"; path = "Target Support Files/Pods-SRS_Native/Pods-SRS_Native.debug.xcconfig"; sourceTree = "<group>"; };
+		46C0A71B8384FB6F19753CD8 /* Pods_SRS_Native.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SRS_Native.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		479B82602609AB4A005AA267 /* SRS_Native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRS_Native.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479B82632609AB4A005AA267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479B82652609AB4A005AA267 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		479B826C2609AB4D005AA267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479B826F2609AB4D005AA267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		479B82712609AB4D005AA267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3B3C7E3CD06E6B85FEEA6A5 /* Pods-SRS_Native.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRS_Native.release.xcconfig"; path = "Target Support Files/Pods-SRS_Native/Pods-SRS_Native.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0DEDC2C4803E2E739A78B4 /* Pods_SRS_Native.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A06CEA8D6458AAC0DF66A20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46C0A71B8384FB6F19753CD8 /* Pods_SRS_Native.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		479B82572609AB4A005AA267 = {
 			isa = PBXGroup;
 			children = (
 				479B82622609AB4A005AA267 /* SRS_Native */,
 				479B82612609AB4A005AA267 /* Products */,
+				78A67AF2703F052DC6224390 /* Pods */,
+				1A06CEA8D6458AAC0DF66A20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = SRS_Native;
 			sourceTree = "<group>";
 		};
+		78A67AF2703F052DC6224390 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				412FC1717EB35691987CF57A /* Pods-SRS_Native.debug.xcconfig */,
+				B3B3C7E3CD06E6B85FEEA6A5 /* Pods-SRS_Native.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 479B82742609AB4D005AA267 /* Build configuration list for PBXNativeTarget "SRS_Native" */;
 			buildPhases = (
+				3A4D06EC62ADC9D96E5818F6 /* [CP] Check Pods Manifest.lock */,
 				479B825C2609AB4A005AA267 /* Sources */,
 				479B825D2609AB4A005AA267 /* Frameworks */,
 				479B825E2609AB4A005AA267 /* Resources */,
+				D3EC300E6DF989D236187433 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A4D06EC62ADC9D96E5818F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SRS_Native-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3EC300E6DF989D236187433 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SRS_Native/Pods-SRS_Native-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SRS_Native/Pods-SRS_Native-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SRS_Native/Pods-SRS_Native-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		479B825C2609AB4A005AA267 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		479B82752609AB4D005AA267 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 412FC1717EB35691987CF57A /* Pods-SRS_Native.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		479B82762609AB4D005AA267 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B3C7E3CD06E6B85FEEA6A5 /* Pods-SRS_Native.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

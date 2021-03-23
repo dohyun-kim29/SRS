@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (5.4.1)
+  - KeychainSwift (19.0.0)
+  - LayoutHelper (1.0.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - Toaster (2.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - KeychainSwift (~> 19.0)
+  - LayoutHelper
+  - RxCocoa
+  - RxSwift
+  - Toaster
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KeychainSwift
+    - LayoutHelper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - Toaster
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  LayoutHelper: fd809f52e0ae583f7576bf5d2af8248b5c3ec4d0
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+
+PODFILE CHECKSUM: 98a07095f0c15aaa237896ff79373ac1a1867888
+
+COCOAPODS: 1.10.1

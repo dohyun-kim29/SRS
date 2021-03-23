@@ -1,0 +1,6 @@
+framework module Pods_SRS_Test {
+  umbrella header "Pods-SRS_Test-umbrella.h"
+
+  export *
+  module * { export * }
+}
