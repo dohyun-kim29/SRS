@@ -11,7 +11,7 @@ import RxCocoa
 import SystemConfiguration
 import Toaster
 
-class NetworkDisConnectedViewController: UIViewController {
+class NetworkDisConnectedViewController : UIViewController {
     
     @IBOutlet weak var refreshButton: UIButton!
     

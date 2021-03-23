@@ -27,7 +27,7 @@
         <!--Network Dis Connected View Controller-->
         <scene sceneID="Eey-Pp-2oJ">
             <objects>
-                <viewController id="Pmz-VP-gtE" customClass="NetworkDisConnectedViewController" customModule="SRS_Native" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NetworkDisConnectedViewController" id="Pmz-VP-gtE" customClass="NetworkDisConnectedViewController" customModule="SRS_Native" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iLI-4y-ecC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
