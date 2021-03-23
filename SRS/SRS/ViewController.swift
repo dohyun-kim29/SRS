@@ -9,9 +9,10 @@ import UIKit
 import WebKit
 import SystemConfiguration
 
-class ViewController: UIViewController, WKNavigationDelegate {
+class ViewController: UIViewController {
     
-    var mainWebView: WKWebView!
+    
+    @IBOutlet weak var mainWebView: WKWebView!
     
     let mainWebViewUrl: URLRequest = URLRequest.init(url: NSURL.init(string: "http://www.dsm-srs.site/signin")! as URL, cachePolicy: URLRequest.CachePolicy.useProtocolCachePolicy, timeoutInterval: 10)
     
@@ -27,8 +28,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //        bringcookie()
+//        self.mainWebView.navigationDelegate = self
         
-        request()
+//        request()
+        loadPage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,7 +44,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
 }
 
-extension ViewController {
+extension ViewController: WKUIDelegate, WKNavigationDelegate {
     
     func isInternetAvailable() -> Bool
     {
@@ -83,11 +86,19 @@ extension ViewController {
         }
     }
     
+    func loadPage() {
+        mainWebView.uiDelegate = self
+        mainWebView.navigationDelegate = self
+        
+        let url: URL = URL(string: "https://www.dsm-srs.site/")!
+        let request = URLRequest(url: url)
+        mainWebView.load(request)
+    }
+    
     func request() {
         
         config.websiteDataStore = WKWebsiteDataStore.default()
         
-//        config.processPool = WKProcessPool()
         
         preferens.javaScriptEnabled = true
         
@@ -101,8 +112,9 @@ extension ViewController {
         view.addSubview(mainWebView)
         self.mainWebView.load(self.mainWebViewUrl)
         
+        mainWebView.uiDelegate = self
+        mainWebView.navigationDelegate = self
         
-        self.mainWebView.navigationDelegate = self
         mainWebView.becomeFirstResponder()
         
     }

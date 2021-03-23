@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -23,21 +23,40 @@
                                     <constraint firstAttribute="width" constant="184" id="Zl6-sJ-iwm"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text" translatesAutoresizingMaskIntoConstraints="NO" id="it2-ME-yfx">
-                                <rect key="frame" x="67.5" y="365" width="240" height="58"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-He-hLp">
+                                <rect key="frame" x="69.5" y="365" width="236" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세미나실 예약 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I8-kw-Aw0">
+                                        <rect key="frame" x="15" y="28" width="206" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대 덕 소 프 트 웨 어 마 이 스 터 고 등 학 교" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gu-ZF-tpT">
+                                        <rect key="frame" x="0.0" y="0.0" width="236" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14.5"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="bEb-Ma-qqa"/>
-                                    <constraint firstAttribute="width" constant="240" id="uMg-bw-HUQ"/>
+                                    <constraint firstItem="5Gu-ZF-tpT" firstAttribute="top" secondItem="Dm7-He-hLp" secondAttribute="top" id="4pR-Nq-HTg"/>
+                                    <constraint firstAttribute="height" constant="58" id="GJf-bi-pGZ"/>
+                                    <constraint firstItem="5Gu-ZF-tpT" firstAttribute="leading" secondItem="Dm7-He-hLp" secondAttribute="leading" id="SPr-34-Gfd"/>
+                                    <constraint firstItem="6I8-kw-Aw0" firstAttribute="centerX" secondItem="Dm7-He-hLp" secondAttribute="centerX" id="UT5-5R-IRn"/>
+                                    <constraint firstAttribute="bottom" secondItem="6I8-kw-Aw0" secondAttribute="bottom" id="gkV-dR-zgD"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Gu-ZF-tpT" secondAttribute="trailing" id="pBf-4o-fYG"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="it2-ME-yfx" firstAttribute="top" secondItem="ask-w9-25Q" secondAttribute="bottom" constant="37" id="0xO-If-AXH"/>
                             <constraint firstItem="ask-w9-25Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E1A-pc-DvE"/>
                             <constraint firstItem="ask-w9-25Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="HuK-kC-vQW"/>
-                            <constraint firstItem="it2-ME-yfx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SJI-iI-zBG"/>
+                            <constraint firstItem="Dm7-He-hLp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LMa-La-uKu"/>
+                            <constraint firstItem="Dm7-He-hLp" firstAttribute="top" secondItem="ask-w9-25Q" secondAttribute="bottom" constant="37" id="mz2-0X-wYg"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,7 +67,6 @@
     </scenes>
     <resources>
         <image name="iCon" width="766" height="537"/>
-        <image name="text" width="1258" height="253"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
