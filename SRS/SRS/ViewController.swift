@@ -89,7 +89,7 @@ extension ViewController: WKUIDelegate, WKNavigationDelegate {
     func loadPage() {
         mainWebView.uiDelegate = self
         mainWebView.navigationDelegate = self
-        
+        mainWebView.backgroundColor = .white
         let url: URL = URL(string: "https://www.dsm-srs.site/")!
         let request = URLRequest(url: url)
         mainWebView.load(request)
